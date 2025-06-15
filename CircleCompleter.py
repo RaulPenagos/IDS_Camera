@@ -1,3 +1,10 @@
+"""
+This script defines, and has been used to test, a Likelihood function that calculates
+the radius and center position of a circle given pints of its border.
+
+Author: Raul Penagos
+Date: Feb 15th, 2025
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import minimize 
@@ -57,7 +64,7 @@ class CircleFit(GenericLikelihoodModel):
 
 
 
-
+# TESTING ####################################################################
 def simular_foto_crop_circulo(nn = 1024):
 
     n = nn
@@ -81,7 +88,7 @@ def simular_foto_crop_circulo(nn = 1024):
 
     return objeto, Imagen
 
-
+# TESTING ####################################################################
 def search_border(fig):
     # Defino frontera
     y_max , x_max = np.asarray(fig.shape) - 1
@@ -111,7 +118,7 @@ def search_border(fig):
 
     return x, y
 
-
+# TESTING ####################################################################
 def main():
 
     n = 1024
